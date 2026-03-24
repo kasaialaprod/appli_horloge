@@ -1,0 +1,172 @@
+/* Layout global */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 16px/1.5 var(--sans);
+  background: radial-gradient(circle at top, #f5f3ff, #f9fafb);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--text-h);
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Zone centrale */
+.app-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carte */
+.time-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header de la carte */
+.time-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+/* Toggle */
+.toggle-group {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: #f3f4ff;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  gap: 4px;
+}
+
+.toggle-button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font: 12px/1 var(--sans);
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.toggle-button:hover {
+  transform: translateY(-1px);
+  background: #ffffffb3;
+}
+
+.toggle-button.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Contenu */
+.time-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px;
+}
+
+button {
+  border: 1px solid #e5e7ebcc;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font: 14px/1 var(--sans);
+  background: var(--accent);
+  color: #000000;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #ffffffb3;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(229, 231, 235, 0.75);
+  font-size: 11px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-shell {
+    padding: 24px 12px;
+  }
+
+  .time-card {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .app-header h1 {
+    font-size: 24px;
+  }
+}
